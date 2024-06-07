@@ -14,13 +14,6 @@ services:
         networks:
             - app-network
 
-    worker:
-        <<: *app
-        command:
-            - "php"
-            - "artisan"
-            - "horizon"
-
     #Nginx Service
     webserver:
         image: nginx:1.22-alpine
